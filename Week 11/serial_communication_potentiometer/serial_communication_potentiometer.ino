@@ -12,6 +12,7 @@ void loop() {
   // map the value we read from potPin to (0, 255) in order to fit in 1 byte
   int mappedPotVal = map(potVal, 0 , 1023, 0, 255);
   // send it to the serial port
+  // Serial.println(mappedPotVal);
   Serial.write(mappedPotVal);
   // short delay for the input voltage to stabilize
   delay(100); 
